@@ -6,6 +6,6 @@ export class ArticleModel {
     constructor(title: string, link: string, votes: number) {
         this.title = title;
         this.link = link;
-        this.votes = votes;
+        this.votes = votes || 0;
     }
 }

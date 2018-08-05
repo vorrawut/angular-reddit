@@ -33,15 +33,15 @@ describe('ArticleComponent', () => {
   });
 
   it('should increase the vote when called onClickVoteUp() ', () => {
+    spyOn(component.article, 'voteUp');
     component.onClickVoteUp();
-    const votes = component.article.votes;
-    expect(votes).toEqual(11);
+    expect(component.article.voteUp).toHaveBeenCalled();
   });
 
   it('should decrease the vote when called onClickVoteDown', () => {
+    spyOn(component.article, 'voteDown');
     component.onClickVoteDown();
-    const votes = component.article.votes;
-    expect(votes).toEqual(9);
-
+    expect(component.article.voteDown).toHaveBeenCalled();
   });
+
 });

@@ -23,10 +23,10 @@ export class ArticleComponent implements OnInit {
   }
 
   onClickVoteUp(): any {
-    this.article.votes++;
+    this.article.voteUp();
   }
 
   onClickVoteDown(): any {
-    this.article.votes--;
+    this.article.voteDown();
   }
 }

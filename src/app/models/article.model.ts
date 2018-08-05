@@ -8,4 +8,12 @@ export class ArticleModel {
         this.link = link;
         this.votes = votes || 0;
     }
+
+    voteUp() {
+        this.votes += 1;
+    }
+
+    voteDown() {
+        this.votes -= 1;
+    }
 }
